@@ -1,0 +1,422 @@
+*{
+  box-sizing: border-box;
+  transition: all ease-in-out 250ms;
+}
+
+body{
+  margin: 0;
+  font-family: 'quicksand';
+  text-align: center;
+  overflow-x:hidden; /*--To hide horizontal scrolling--*/
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.container{
+  width: 95%;
+  max-width: 70em;
+  margin: 0 auto;
+}
+
+.clearfix::after,
+section::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+h1{
+  font-weight: 300;
+  font-size: 1.7rem;
+  margin-top: 0.2em;
+}
+
+.title{
+  font-size: 2.5rem;
+  margin-bottom: 1.25em;
+  font-weight: 900;
+  margin-top: 0.3em;
+}
+
+.title span{
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: block;
+}
+
+@media (min-width:60rem){
+  .title{
+    font-size: 3.5rem;
+    margin-top: -1.3em;
+  }
+}
+
+.button{
+  display: inline-block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style:dotted;
+  padding: .5em 1.75em;
+}
+
+@media (min-width:60rem){
+  .button{
+    font-size: 1.5rem;
+  }
+}
+
+.button-small{
+  font-size: .7rem;
+  font-weight: 700;
+}
+
+.button-accent{
+  color: #4390D5;
+  border-color: #4390D5;
+}
+
+.button-accent:hover, .button-accent:focus{
+  background: #0E76D3;
+}
+
+.logo{
+  color: green;
+}
+
+header{
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 1em;
+  z-index: 9;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li{
+  display: inline-block;
+  margin: 1em;
+}
+
+#pack{
+  color: #54D17A;
+}
+
+#pack:hover, #pack:focus{
+  color: #23A26E;
+}
+
+nav a{
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .7rem;
+  padding: 0;
+  color: purple;
+}
+
+nav a:hover, nav a:focus{
+  color: #6DABE2;
+}
+
+@media (min-width:60rem){
+  .logo{
+    float: left;
+  }
+  nav{
+    float: right;
+  }
+}
+
+#slogan{
+  background-image: url('img/office.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 10em 0;
+  color: #FFF;
+  background-attachment: fixed;
+}
+
+@media (min-width:60rem){
+  #slogan{
+    height:100vh;
+    padding-top: 35vh;
+  }
+}
+
+#services-textbox{
+  background-color: #232323;
+  padding: 4em;
+  width: 100vw;
+  margin-left: -2.6%;
+  outline: 2px solid #4390D5;
+  outline-offset: -2.5em;
+  position: relative;
+  color: #fff;
+}
+
+#services-textbox h1{
+  color: #4390D5;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: .5em;
+  background: #232323;
+  padding: 0 .25em;
+}
+
+
+
+@media (min-width:60rem){
+  h1{
+    font-size: 2.5rem;
+  }
+  .services{
+    background-image: url('img/work.jpg');
+    background-repeat: no-repeat;
+    padding-bottom: 10em;
+  }
+  #services-textbox{
+    width: 50%;
+    margin-left: 0;
+    top:-5em;
+    text-align:left;
+    box-shadow: 0 0 3em 0 rgba(0,0,0,.3);
+  }
+  #services-textbox h1{
+    top: .3em;
+    left: 4rem;
+    transform: translateX(0);
+  }
+}
+
+#portfolio{
+  margin: 3em 0 0;
+}
+
+#portfolio h1{
+  margin-bottom: 2em;
+}
+
+.port-item{
+  margin: 0;
+  position: relative;
+}
+
+.port-item img{
+  display: block;
+}
+
+.port-desc{
+  position: absolute;
+  z-index: 100;
+  bottom: 0em;
+  left: 0em;
+  right: 0em;
+  color: white;
+  background: rgba(0, 0, 0, .6);
+  padding-top: .5em;
+  padding-bottom: 2em;
+}
+
+.port-desc p{
+  margin: 1em;
+}
+
+@media (min-width:30rem){
+  .port-item{
+    width: 50%;
+    float: left;
+  }
+}
+
+@media (min-width:60rem){
+  .port-item{
+    width: 33.333334%;
+    overflow: hidden;
+  }
+  .port-desc{
+    transform: translateY(150%);
+  }
+  .port-item:hover .port-desc{
+    transform: translateY(0%);
+  }
+}
+
+footer{
+  padding: 3em 0;
+}
+
+#packages{
+    padding: 3em;
+}
+
+.pricing-table{
+  float: left;
+  width: 33.3%;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+.price-box{
+  background: #fff;
+  color: #555;
+  list-style: none;
+  border: 0.5em solid #555;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.pricebox:hover{
+  box-shadow: 0 1.2em 1.8em 0 #000;
+}
+
+.price-head{
+  background-color: #111;
+  color: #fff;
+  font-size: 1.7em;
+}
+
+.price-box li{
+  padding: 1.2em;
+  border-bottom: 1em solid #eee;
+  text-align: center;
+}
+
+.price-box .price{
+  background-color: #f4f4f4;
+  font-size: 1.2em;
+}
+
+.sign-up{
+  background-color: #4CAf50;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .5em 1.75em;
+}
+
+.price-box .header-green{
+  background-color: #3AE0DD;
+}
+
+.pricing-table {
+    transform: scale(1);
+    transition: 0.4s ease;
+}
+
+.pricing-table:hover {
+    transform: scale(1.02);
+    transition: 0.4s ease;
+}
+
+.hire-us{
+  display: none;
+}
+
+@media (max-width:50rem){
+  .pricing-table{
+    width: 100%;
+  }
+  .hire-us{
+    display: inline-block;
+    margin-top: 2em;
+  }
+}
+
+.registerbox{
+  float: right;
+  margin: 0.3em;
+  width: 25em;
+  height: 26em;
+  padding: 2em 2.5em;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+h2{
+  margin: 0;
+  padding: 0 0 1.2em;
+  color: #3AE0DD;
+  text-align: center;
+}
+
+.registerbox p{
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.registerbox input{
+  width: 100%;
+  margin-bottom: 1.2em;
+}
+
+.registerbox input[type="text"], .registerbox input[type="password"], .registerbox input[type="name"]{
+  border: none;
+  border-bottom: 0.1em solid #fff;
+  background: transparent;
+  outline: none;
+  height: 3em;
+  color: #fff;
+  font: 0.9em;
+}
+
+::placeholder{
+  color: rgb(255, 255, 255, .5);
+}
+
+.registerbox input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 3em;
+  color: #fff;
+  font-size: 0.9em;
+  background: #ff267e;
+  cursor: pointer;
+  border-radius: 1.5em;
+}
+
+.registerbox input[type="submit"]:hover{
+  background: #efed40;
+  color: #262626;
+}
+
+.registerbox a{
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media (min-width:60rem){
+  h2{
+    font-size: 1.9em;
+  }
+  .registerbox{
+    height: 28em;
+  }
+  .registerbox p{
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width:50rem){
+  .registerbox{
+    display: none;
+  }
+}
